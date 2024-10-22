@@ -1,0 +1,12 @@
+.venv/
+venv/
+.idea/
+__pycache__/
+*.pyc
+.arsenal.json
+arsenal.egg-info/
+arsenal_cli.egg-info/
+build/
+dist/
+Pipfile.lock
+Pipfile
