@@ -32,3 +32,18 @@ nslookup -type=any -query=AXFR zonetransfer.me nsztm1.digi.ninja
 dig axfr @nsztm1.digi.ninja zonetransfer.me
 # If the server is misconfigured and allows the transfer, you'll receive a complete list of DNS records for the domain, including all subdomains
 ```
+## DNS lookup for mail servers
+```
+host -t MX microsoft.com
+```
+
+## dig - DNS lookup for mail servers
+```
+dig mx inlanefreight.com | grep "MX" | grep -v ";"
+```
+
+## host - DNS lookup for IPv4 address
+```
+host -t A mail1.inlanefreight.htb.
+```
+

@@ -9,10 +9,12 @@
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 ```
 
-## enable restricted admin
+## enable restricted admin (t. (allows an administrator to connect to a remote computer without exposing their credentials to the remote host)
 #cat/POSTEXPLOIT 
 ```
 New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Lsa" -Name DisableRestrictedAdmin -Value 0
+# OR
+reg add HKLM\System\CurrentControlSet\Control\Lsa /t REG_DWORD /v DisableRestrictedAdmin /d 0x0 /f
 ```
 
 ## disable restricted admin
