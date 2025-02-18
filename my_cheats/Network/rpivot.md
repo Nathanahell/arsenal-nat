@@ -1,4 +1,4 @@
- # rpivot
+# rpivot
 
 ## rpivot - Run rpivot server
 ```
@@ -9,7 +9,6 @@ python2.7 server.py --proxy-port 9050 --server-port 9999 --server-ip 0.0.0.0
 ```
 python2.7 client.py --server-ip 10.10.14.18 --server-port 9999
 ```
-
 
 ## rpivot - Connect to NTLM proxy
 ```

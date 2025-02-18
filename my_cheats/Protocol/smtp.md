@@ -1,4 +1,4 @@
-# SMTP
+# SMTP
 
 ## Interact with SMTP server - Footprint
 ```

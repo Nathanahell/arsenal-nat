@@ -3,11 +3,14 @@
 
 ## Certificate transparency - Infrastructure enumeration - Recon
 ```
-export TARGET="facebook.com"
-curl -s "https://crt.sh/?q=${TARGET}&output=json" | jq -r '.[] | "\(.name_value)\n\(.common_name)"' | sort -u > "${TARGET}_crt.sh.txt"
-# OR
+export TARGET="facebook.com"; curl -s "https://crt.sh/?q=${TARGET}&output=json" | jq -r '.[] | "\(.name_value)\n\(.common_name)"' | sort -u > "${TARGET}_crt.sh.txt"
+```
+
+## Certificate transparency - Infrastructure enumeration bis - Recon
+```
 curl -s https://crt.sh/\?q\=<target-domain>\&output\=json | jq .
 ```
+
 ## Certificate transparency - 'dev' domain lookup on crt.sh
 ```
 curl -s "https://crt.sh/?q=facebook.com&output=json" | jq -r '.[] | select(.name_value | contains("dev")) | .name_value' | sort -u

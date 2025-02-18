@@ -1,4 +1,4 @@
-# MSSQL
+# MSSQL
 
 ## Log into MSSQL srv using Windows auth - Footprint
 ```
