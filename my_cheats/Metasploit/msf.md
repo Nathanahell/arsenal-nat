@@ -181,3 +181,32 @@ msf6 db_destroy
 ```
 msf6 db_destroy <user:password@host:port/database>
 ```
+## msf6 - Search for RDP scanner
+```
+msf6 > search rdp_scanner
+```
+## msf6 - Use multi-handler exploit
+```
+msf6 > use exploit/multi/handler
+```
+
+## msf6 - Run ping sweep
+```
+msf6> run post/multi/gather/ping_sweep RHOSTS=172.16.5.0/23
+```
+
+## msf6 - Use SOCKS proxy module
+```
+msf6 > use auxiliary/server/socks_proxy
+```
+
+## msf6 - List running jobs
+```
+msf6 auxiliary(server/socks_proxy) > jobs
+```
+
+## msf6 - Use autoroute module
+```
+msf6 > use post/multi/manage/autoroute
+```
+

